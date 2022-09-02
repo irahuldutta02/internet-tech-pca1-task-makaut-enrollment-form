@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAKAUT || BCA ENROLLMENT</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --deepblue: rgb(0, 0, 129);
+            --lightblue: rgb(0, 205, 255);
+        }
+
+        /* title */
+        #title {
+            text-align: center;
+            margin: 10px;
+        }
+
+        #title img {
+            width: 50px;
+            height: 50px;
+            float: left;
+        }
+
+        #title-title {
+            color: var(--deepblue);
+        }
+
+        #title-subtitle {
+            color: var(--lightblue);
+        }
+
+        /* from header */
+        #from-header {
+            text-align: center;
+            color: var(--deepblue);
+        }
+
+        /* from */
+        input[type=text],
+        input[type=number],
+        input[type=email],
+        input[type=file],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        input[type=submit] {
+            background-color: var(--deepblue);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+        input[type=submit]:hover {
+            background-color: white;
+            color: black;
+        }
+
+
+        .container1{
+            border: 2px solid black;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .container2{
+            border: 2px solid black;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .container-form {
+            border-radius: 5px;
+            background-color: var(--lightblue);
+            padding: 20px;
+            border: 2px solid black;
+        }
+
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+
+            .col-25,
+            .col-75,
+            input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- site title -->
+    <div class="container1">
+        <div id="title">
+            <img src="https://makautwb.ac.in/notun/images/logo.png" alt="">
+            <h1 id="title-title">MAULANA ABUL KALAM AZAD UNIVERSITY OF TECHNOLOGY, WEST BENGAL</h1>
+            <h4 id="title-subtitle">(FORMERLY KNOWN AS WEST BENGAL UNIVERSITY OF TECHNOLOGY)</h4>
+        </div>
+    </div>
+
+    <!-- from header  -->
+    <div class="container2">
+        <div id="from-header">
+            <h2>MAKAUT BCA ENROLLMENT FROM FOR ACADEMIC YEAR 2023-2024</h2>
+        </div>
+    </div>
+
+    <!-- from -->
+    <div class="container-form">
+        <form action="/action_page.php">
+
+            <!-- first name  -->
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">First Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="firstname" placeholder="Your First Name">
+                </div>
+            </div>
+
+            <!-- last name  -->
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname">Last Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="lname" name="lastname" placeholder="Your Last Name">
+                </div>
+            </div>
+
+            <!-- gender  -->
+            <div class="row">
+                <div class="col-25">
+                    <label for="gender">Gender</label>
+                </div>
+                <div class="col-75">
+                    <select id="gender" name="gender">
+                        <option value="genaral">Male</option>
+                        <option value="sc">Female</option>
+                        <option value="st">Others</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- phone number  -->
+            <div class="row">
+                <div class="col-25">
+                    <label for="mobile-number">Mobile Number</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" id="mobile-number" name="mobile-number"
+                        placeholder="Your Mobile Number" min="10" max="10">
+                </div>
+            </div>
+
+            <!-- email  -->
+            <div class="row">
+                <div class="col-25">
+                    <label for="email">Email</label>
+                </div>
+                <div class="col-75">
+                    <input type="email" id="email" name="email" placeholder="Your Email ID">
+                </div>
+            </div>
+
+            <!-- father name  -->
+            <div class="row">
+                <div class="col-25">
+                    <label for="father-name">Father's Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="father-name" name="father-name" placeholder="Your Father's Name">
+                </div>
+            </div>
+
+            <!-- mother name  -->
+            <div class="row">
+                <div class="col-25">
+                    <label for="mother-name">Mother's Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="mother-name" name="mother-name" placeholder="Your Mother's Name">
+                </div>
+            </div>
+
+            <!-- caste  -->
+            <div class="row">
+                <div class="col-25">
+                    <label for="caste">Caste</label>
+                </div>
+                <div class="col-75">
+                    <select id="caste" name="caste">
+                        <option value="genaral">Genaral</option>
+                        <option value="sc">SC</option>
+                        <option value="st">ST</option>
+                        <option value="obc">OBC</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- current-address  -->
+            <div class="row">
+                <div class="col-25">
+                    <label for="current-address">Current Address</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="current-address" name="current-address" placeholder="Your Current Address"
+                        style="height:200px"></textarea>
+                </div>
+            </div>
+
+            <!-- current-address  -->
+            <div class="row">
+                <div class="col-25">
+                    <label for="permanent-address">Permanent Address</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="permanet-address" name="permanent-address" placeholder="Your Permanent Address"
+                        style="height:200px"></textarea>
+                </div>
+            </div>
+
+            <!-- x percentage  -->
+            <div class="row">
+                <div class="col-25">
+                    <label for="x-percentage">Class X Percentage</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" id="x-percentage" name="x-percentage" placeholder="Your Class X Percentage"
+                        min="2" max="2">
+                </div>
+            </div>
+
+            <!-- x board name  -->
+            <div class="row">
+                <div class="col-25">
+                    <label for="x-board">Class X Board Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="x-board-name" name="x-board-name" placeholder="Class X Borard Name">
+                </div>
+            </div>
+
+            <!-- x board name  -->
+            <div class="row">
+                <div class="col-25">
+                    <label for="x-medium">Class X Medium</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="x-medium" name="x-medium" placeholder="Class X Medium">
+                </div>
+            </div>
+
+            <!-- xii percentage  -->
+            <div class="row">
+                <div class="col-25">
+                    <label for="xii-percentage">Class XII Percentage</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" id="xii-percentage" name="xii-percentage"
+                        placeholder="Your Class XII Percentage" min="2" max="2">
+                </div>
+            </div>
+
+            <!-- xii board name  -->
+            <div class="row">
+                <div class="col-25">
+                    <label for="x-medium">Class XII Medium</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="xii-medium" name="xii-medium" placeholder="Class XII Medium">
+                </div>
+            </div>
+
+            <!-- xii board name  -->
+            <div class="row">
+                <div class="col-25">
+                    <label for="xii-board">Class XII Board Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="xii-board-name" name="xii-board-name" placeholder="Class XII Borard Name">
+                </div>
+            </div>
+
+            <!-- cet roll number  -->
+            <div class="row">
+                <div class="col-25">
+                    <label for="cet-roll-number">CET Roll Number</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" id="cet-roll-number" name="cet-roll-number" placeholder="CET Roll Numebr">
+                </div>
+            </div>
+
+            <!-- cet rank  -->
+            <div class="row">
+                <div class="col-25">
+                    <label for="cet-rank">CET Rank</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" id="cet-rank" name="cet-rank" placeholder="CET Rank">
+                </div>
+            </div>
+
+            <!-- cet rank card  -->
+            <div class="row">
+                <div class="col-25">
+                    <label for="cet-rank-card">CET Rank Card</label>
+                </div>
+                <div class="col-75">
+                    <input type="file" id="cet-rank-card" name="cet-rank-card">
+                </div>
+            </div>
+
+            <!-- submit  -->
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+
+
+
+
+
+        </form>
+    </div>
+
+</body>
+
+</html>
